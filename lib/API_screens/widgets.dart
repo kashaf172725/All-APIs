@@ -19,6 +19,7 @@ Widget CustomText({
         fontSize: fontSize,
         fontWeight: fontWeight,
         color: color,
+       
       ),
     ),
   );
@@ -61,10 +62,9 @@ Widget box(var heading,var controller, {isObsecure = false}) {
  Widget CustomButton(
   
 {  
- //var     context,
   var text,
   var height ,
-   var color1,
+   var fontcolor,
   var color,
   var onPressed}
 ){
@@ -82,12 +82,11 @@ Widget box(var heading,var controller, {isObsecure = false}) {
               ),
               height: height,
             width: 200,
-           //  width: MediaQuery.of(context).size.width,
               child: TextButton(
                 onPressed: 
                 onPressed,
                
-                child: CustomText(text: text,fontSize: 20,fontWeight: FontWeight.bold,color: color1)
+                child: CustomText(text: text,fontSize: 20,fontWeight: FontWeight.bold,color: fontcolor)
               ),
             ),
   );

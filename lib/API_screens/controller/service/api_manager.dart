@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter_application_1/API_screens/widgets.dart';
 import 'package:http/http.dart' as http;
+import '../../model/signup-model.dart';
 import 'end_points.dart';
 
 class APIManager {
@@ -14,7 +15,7 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return res;
+      return login_model.fromJson(res);
     } catch (e) {
     showSnack(context, e.toString());
     }
@@ -28,7 +29,7 @@ class APIManager {
       var responce= await  http.get(url);
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
-      return res;
+      return getplaylist_model.fromJson(res);
     }catch(e)
     {
   showSnack(context, e.toString());
@@ -42,7 +43,7 @@ class APIManager {
        var res = jsonDecode(responce.body);
         showSnack(context, res["message"],isSuccess: true);
      
-      return res;
+      return addplaylist_model.fromJson(res);
     }catch(e){
       showSnack(context, e.toString);
 
@@ -56,7 +57,7 @@ class APIManager {
        var res = jsonDecode(responce.body);
         showSnack(context, res["message"],isSuccess: true);
      
-      return res;
+      return delete_model.fromJson(res);
     }catch(e){
       showSnack(context, e.toString);
 
@@ -72,7 +73,7 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return res;
+      return Signup_model.fromJson(res);
     } catch (e) {
     showSnack(context, e.toString());
     }
@@ -86,7 +87,7 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return res;
+      return update_model.fromJson(res);
     } catch (e) {
     showSnack(context, e.toString());
    
@@ -94,3 +95,5 @@ class APIManager {
 
 }
 }
+
+// ModelName.fromJson(res)
