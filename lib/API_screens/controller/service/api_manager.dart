@@ -64,6 +64,21 @@ class APIManager {
   }
 }
 
+  static update_playlist(context,body,id)async{
+    try{
+      var url = Uri.parse(BASE_URL + updatePlayListEndpoint + id);
+      var responce = await http.patch(url,body: {"name":body});
+      var res = jsonDecode(responce.body);
+      showSnack(context, res["message"],isSuccess: true);
+      print(responce.body);
+      return update_model.fromJson(res);
+    } catch (e) {
+    showSnack(context, e.toString());
+   
+  }
+
+}
+
   static sinup(context,body) async {
   
     try {
@@ -79,21 +94,6 @@ class APIManager {
     }
     
   }
-
-  static update_playlist(context,body,id)async{
-    try{
-      var url = Uri.parse(BASE_URL + updatePlayListEndpoint + id);
-      var responce = await http.patch(url,body: {"name":body});
-      var res = jsonDecode(responce.body);
-      showSnack(context, res["message"],isSuccess: true);
-      print(responce.body);
-      return update_model.fromJson(res);
-    } catch (e) {
-    showSnack(context, e.toString());
-   
-  }
-
-}
+ 
 }
 
-// ModelName.fromJson(res)

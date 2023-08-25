@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/API_screens/controller/service/api_manager.dart';
@@ -8,7 +7,7 @@ bool isloading = false;
 var loading = false;
 var load = false;
 var loading1 = false;
-var playlist;
+getplaylist_model playlist;
 
 
 getplaylistprovider(context,)async{

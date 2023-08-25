@@ -19,7 +19,8 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return
+     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => loginProvider()),
         ChangeNotifierProvider(create: (context) => PlaylistProvider()),
@@ -45,6 +46,8 @@ endpoints
 manager
 provider
 main: multiprovider
+model made
+attach model
 view : initstate + builder + place name in view from provider
 
 */
