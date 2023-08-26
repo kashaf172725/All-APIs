@@ -1,12 +1,12 @@
-class login_model {
+class Loginmodel {
   Data? data;
   String? message;
   int? statusCode;
   bool? success;
 
-  login_model({this.data, this.message, this.statusCode, this.success});
+  Loginmodel({this.data, this.message, this.statusCode, this.success});
 
-  login_model.fromJson(Map<String, dynamic> json) {
+  Loginmodel.fromJson(Map<String, dynamic> json) {
     data = json['data'] != null ? new Data.fromJson(json['data']) : null;
     message = json['message'];
     statusCode = json['StatusCode'];

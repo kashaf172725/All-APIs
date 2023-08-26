@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/API_screens/controller/provider/signup_provider.dart';
+import 'package:flutter_application_1/API_screens/controller/provider/Signup_provider.dart';
 import 'package:provider/provider.dart';
-
 import '../../utils/const.dart';
-import '../controller/provider/login_provider.dart';
 import '../widgets.dart';
 
 class SinUpScreen extends StatefulWidget {
@@ -51,7 +49,7 @@ class _SinUpScreenState extends State<SinUpScreen> {
                               text: "Next",
                               height: 40,
                               color: MyColors.dark_blue,
-                              color1: MyColors.lighe_blue,
+                              fontcolor: MyColors.lighe_blue,
                               onPressed: () {
                                 var provider = context.read<signupProvider>();
                                 provider.signup(context,

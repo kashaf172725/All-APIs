@@ -1,7 +1,12 @@
 import 'dart:convert';
 import 'package:flutter_application_1/API_screens/widgets.dart';
 import 'package:http/http.dart' as http;
-import '../../model/signup-model.dart';
+import '../../model/Addplaylist_model.dart';
+import '../../model/Delete_model.dart';
+import '../../model/Getplaylist_model.dart';
+import '../../model/Login_model.dart';
+import '../../model/Signup_model.dart';
+import '../../model/Update_model.dart';
 import 'end_points.dart';
 
 class APIManager {
@@ -15,7 +20,7 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return login_model.fromJson(res);
+      return Loginmodel.fromJson(res);
     } catch (e) {
     showSnack(context, e.toString());
     }
@@ -29,7 +34,7 @@ class APIManager {
       var responce= await  http.get(url);
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
-      return getplaylist_model.fromJson(res);
+      return Getplaylistmodel.fromJson(res);
     }catch(e)
     {
   showSnack(context, e.toString());
@@ -43,7 +48,7 @@ class APIManager {
        var res = jsonDecode(responce.body);
         showSnack(context, res["message"],isSuccess: true);
      
-      return addplaylist_model.fromJson(res);
+      return Addplaylistmodel.fromJson(res);
     }catch(e){
       showSnack(context, e.toString);
 
@@ -57,7 +62,7 @@ class APIManager {
        var res = jsonDecode(responce.body);
         showSnack(context, res["message"],isSuccess: true);
      
-      return delete_model.fromJson(res);
+      return Deletemodel.fromJson(res);
     }catch(e){
       showSnack(context, e.toString);
 
@@ -71,7 +76,7 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return update_model.fromJson(res);
+      return Updatemodel.fromJson(res);
     } catch (e) {
     showSnack(context, e.toString());
    
@@ -88,7 +93,7 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return Signup_model.fromJson(res);
+      return Signupmodel.fromJson(res);
     } catch (e) {
     showSnack(context, e.toString());
     }

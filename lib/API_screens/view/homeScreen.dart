@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/API_screens/view/playlist.dart';
 import 'package:provider/provider.dart';
 import '../../utils/const.dart';
-import '../controller/provider/playlistProvider.dart';
+import '../controller/provider/PlaylistProvider.dart';
 import 'images.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               return  provider.isloading ?CircularProgressIndicator(): 
                               Column(
                                 children: [
-                                  for (int i = 0; i < provider.playlist["data"].length; i++)
+                                  for (int i = 0; i < provider.playlist.data.length; i++)
                                     Padding(
                                       padding:
                                           const EdgeInsets.symmetric(vertical: 4.0),

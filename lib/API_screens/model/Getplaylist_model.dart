@@ -1,12 +1,12 @@
-class getplaylist_model {
+class Getplaylistmodel {
   List<Data>? data;
   String? message;
   int? statusCode;
   bool? success;
 
-  getplaylist_model({this.data, this.message, this.statusCode, this.success});
+  Getplaylistmodel({this.data, this.message, this.statusCode, this.success});
 
-  getplaylist_model.fromJson(Map<String, dynamic> json) {
+  Getplaylistmodel.fromJson(Map<String, dynamic> json) {
     if (json['data'] != null) {
       data = <Data>[];
       json['data'].forEach((v) {

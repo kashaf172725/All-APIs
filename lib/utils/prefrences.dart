@@ -11,6 +11,7 @@ class Preference{
     var pref = await SharedPreferences.getInstance();
     pref.setString(tokenkey, token);
     return true;
+ 
     }
     catch(e){
       return false;

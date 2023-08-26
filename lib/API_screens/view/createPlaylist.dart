@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/API_screens/controller/provider/playlistProvider.dart';
+import 'package:flutter_application_1/API_screens/controller/provider/PlaylistProvider.dart';
 import 'package:provider/provider.dart';
 import '../../utils/const.dart';
 import '../widgets.dart';

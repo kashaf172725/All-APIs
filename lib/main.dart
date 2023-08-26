@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/API_screens/controller/provider/playlistProvider.dart';
-import 'package:flutter_application_1/API_screens/controller/provider/signup_provider.dart';
+import 'package:flutter_application_1/API_screens/controller/provider/PlaylistProvider.dart';
+import 'package:flutter_application_1/API_screens/controller/provider/Signup_provider.dart';
 import 'package:provider/provider.dart';
-import 'API_screens/controller/provider/login_provider.dart';
+import 'API_screens/controller/provider/Login_provider.dart';
 import 'API_screens/view/splash.dart';
 
 void main() {

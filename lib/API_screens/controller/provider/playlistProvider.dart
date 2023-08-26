@@ -2,12 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/API_screens/controller/service/api_manager.dart';
 
+import '../../model/Getplaylist_model.dart';
+
 class PlaylistProvider extends ChangeNotifier{
 bool isloading = false;
 var loading = false;
 var load = false;
 var loading1 = false;
-getplaylist_model playlist;
+Getplaylistmodel playlist;
 
 
 getplaylistprovider(context,)async{

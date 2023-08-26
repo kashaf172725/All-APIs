@@ -1,11 +1,11 @@
-class update_model {
+class Updatemodel {
   String? message;
   String? error;
   int? statusCode;
 
-  update_model({this.message, this.error, this.statusCode});
+  Updatemodel({this.message, this.error, this.statusCode});
 
-  update_model.fromJson(Map<String, dynamic> json) {
+  Updatemodel.fromJson(Map<String, dynamic> json) {
     message = json['message'];
     error = json['error'];
     statusCode = json['statusCode'];

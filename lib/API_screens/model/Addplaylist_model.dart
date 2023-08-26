@@ -1,12 +1,12 @@
-class addplaylist_model {
+class Addplaylistmodel {
   String? id;
   String? message;
   int? statusCode;
   bool? success;
 
-  addplaylist_model({this.id, this.message, this.statusCode, this.success});
+  Addplaylistmodel({this.id, this.message, this.statusCode, this.success});
 
-  addplaylist_model.fromJson(Map<String, dynamic> json) {
+  Addplaylistmodel.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     message = json['message'];
     statusCode = json['StatusCode'];

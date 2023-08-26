@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/API_screens/controller/provider/login_provider.dart';
+import 'package:flutter_application_1/API_screens/controller/provider/Login_provider.dart';
 import 'package:flutter_application_1/utils/const.dart';
 import 'package:provider/provider.dart';
 import '../widgets.dart';
@@ -72,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             text: "Next",
                             height: 40,
                             color: MyColors.dark_blue,
-                            color1: MyColors.lighe_blue,
+                            fontcolor: MyColors.lighe_blue,
                             onPressed: () {
                             
                           var provider= context.read<loginProvider>();

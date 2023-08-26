@@ -1,11 +1,11 @@
-class Signup_model {
+class Signupmodel {
   String? message;
   String? error;
   int? statusCode;
 
-  Signup_model({this.message, this.error, this.statusCode});
+  Signupmodel({this.message, this.error, this.statusCode});
 
-  Signup_model.fromJson(Map<String, dynamic> json) {
+  Signupmodel.fromJson(Map<String, dynamic> json) {
     message = json['message'];
     error = json['error'];
     statusCode = json['statusCode'];

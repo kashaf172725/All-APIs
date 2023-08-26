@@ -1,12 +1,12 @@
-class delete_model {
+class Deletemodel {
   String? message;
   List<Null>? data;
   int? statusCode;
   bool? success;
 
-  delete_model({this.message, this.data, this.statusCode, this.success});
+  Deletemodel({this.message, this.data, this.statusCode, this.success});
 
-  delete_model.fromJson(Map<String, dynamic> json) {
+  Deletemodel.fromJson(Map<String, dynamic> json) {
     message = json['message'];
     if (json['data'] != null) {
       data = <Null>[];
@@ -29,3 +29,4 @@ class delete_model {
     return data;
   }
 }
+
