@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:flutter_application_1/API_screens/widgets.dart';
 import 'package:http/http.dart' as http;
 import '../../model/Addplaylist_model.dart';
@@ -19,8 +20,14 @@ class APIManager {
       await http.post(url, body: {"email": email, "password": password});
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
-      print(responce.body);
-      return Loginmodel.fromJson(res);
+    //  return res;
+    
+    var temp =  Loginmodel.fromJson(res);
+    if(temp != null)
+     return temp;
+     else{
+      showSnack(context, "temp is null");
+     }
     } catch (e) {
     showSnack(context, e.toString());
     }
@@ -34,7 +41,14 @@ class APIManager {
       var responce= await  http.get(url);
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
-      return Getplaylistmodel.fromJson(res);
+     
+      var temp = Getplaylistmodel.fromJson(res);
+      if(temp != null)
+      return temp;
+      else{
+      showSnack(context, "temp is null");
+      }
+  
     }catch(e)
     {
   showSnack(context, e.toString());
@@ -48,7 +62,13 @@ class APIManager {
        var res = jsonDecode(responce.body);
         showSnack(context, res["message"],isSuccess: true);
      
-      return Addplaylistmodel.fromJson(res);
+       var temp = Addplaylistmodel.fromJson(res);
+      if(temp != null)
+      return temp;
+      else{
+      showSnack(context, "temp is null");
+      }
+  
     }catch(e){
       showSnack(context, e.toString);
 
@@ -62,7 +82,13 @@ class APIManager {
        var res = jsonDecode(responce.body);
         showSnack(context, res["message"],isSuccess: true);
      
-      return Deletemodel.fromJson(res);
+       var temp = Deletemodel.fromJson(res);
+      if(temp != null)
+      return temp;
+      else{
+      showSnack(context, "temp is null");
+      }
+  
     }catch(e){
       showSnack(context, e.toString);
 
@@ -76,7 +102,12 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return Updatemodel.fromJson(res);
+       var temp = Updatemodel.fromJson(res);
+      if(temp != null)
+      return temp;
+      else{
+      showSnack(context, "temp is null");
+      }
     } catch (e) {
     showSnack(context, e.toString());
    
@@ -93,7 +124,13 @@ class APIManager {
       var res = jsonDecode(responce.body);
       showSnack(context, res["message"],isSuccess: true);
       print(responce.body);
-      return Signupmodel.fromJson(res);
+      var temp = Signupmodel.fromJson(res);
+      if (temp != null)
+      return temp;
+       else{
+      showSnack(context, "temp is null");
+     }
+      
     } catch (e) {
     showSnack(context, e.toString());
     }

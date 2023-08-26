@@ -1,4 +1,6 @@
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/API_screens/view/createPlaylist.dart';
 import 'package:flutter_application_1/API_screens/view/update_screen.dart';
@@ -140,7 +142,7 @@ class _PlaylistState extends State<Playlist> {
                             ),
                           ),
                           for (int i = 0;
-                              i < provider.playlist.data.length;
+                              i < provider.playlist!.data!.length;
                               i++) ...[
                             Padding(
                               padding:
@@ -180,7 +182,7 @@ class _PlaylistState extends State<Playlist> {
                                           width: 200,
                                           child: Center(
                                             child: Text(
-                                              provider.playlist.data.[i].name,
+                                              provider.playlist!.data![i].name!,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.center,
                                               style: TextStyle(
@@ -202,7 +204,7 @@ class _PlaylistState extends State<Playlist> {
                                                       provider
                                                           .delPlaylistprovider(
                                                               context,
-                                                              provider.playlist.data[i].id);
+                                                              provider.playlist!.data![i].id);
                                                     },
                                                     child: Icon(
                                                       Icons.delete,
@@ -219,7 +221,7 @@ class _PlaylistState extends State<Playlist> {
                                                 MaterialPageRoute(
                                                     builder: (context) =>
                                                         UpdateScreen(
-                                                            provider.playlist.data[i])));
+                                                            provider.playlist!.data![i])));
                                           },
                                           child: Container(
                                               width: 100,

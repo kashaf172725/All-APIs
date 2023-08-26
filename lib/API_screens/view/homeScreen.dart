@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/API_screens/view/playlist.dart';
 import 'package:provider/provider.dart';
@@ -208,10 +210,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           Builder(
                             builder: (context) {
                              var  provider = context.watch<PlaylistProvider>();
-                              return  provider.isloading ?CircularProgressIndicator(): 
+                                                       return  provider.  playlist == null ?CircularProgressIndicator(): 
+
                               Column(
                                 children: [
-                                  for (int i = 0; i < provider.playlist.data.length; i++)
+                                  for (int i = 0; i < provider.playlist!.data!.length; i++)
                                     Padding(
                                       padding:
                                           const EdgeInsets.symmetric(vertical: 4.0),
@@ -233,7 +236,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHXxIYiq_T7DYdZfqlUfa9Lg3P2cM6xiR7177e-UtoOhKZejmht22JGGrcvfm1TM02V3U&usqp=CAU"),
                                                         fit: BoxFit.fitHeight))),
                                             title: Text(
-                                             provider.playlist["data"][i]["name"],
+                                            provider.playlist!.data![i].name!,
                                               style: TextStyle(
                                                   color: MyColors.black, fontSize: 16),
                                             ),

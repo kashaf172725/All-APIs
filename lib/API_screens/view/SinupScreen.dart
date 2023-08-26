@@ -13,6 +13,7 @@ class SinUpScreen extends StatefulWidget {
 
 class _SinUpScreenState extends State<SinUpScreen> {
   TextEditingController email = TextEditingController();
+    TextEditingController name = TextEditingController();
   TextEditingController password = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -45,6 +46,7 @@ class _SinUpScreenState extends State<SinUpScreen> {
                               color: MyColors.blue),
                           box("E-mail", email),
                           box('Password', password, isObsecure: true),
+                          box("name", name),
                           CustomButton(
                               text: "Next",
                               height: 40,
@@ -53,7 +55,9 @@ class _SinUpScreenState extends State<SinUpScreen> {
                               onPressed: () {
                                 var provider = context.read<signupProvider>();
                                 provider.signup(context,
-                                    email: email.text, password: password.text);
+                                    email: email.text,
+                                    name: name.text,
+                                     password: password.text);
                               }),
                         ],
                       ),

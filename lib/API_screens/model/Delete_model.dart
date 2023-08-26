@@ -11,7 +11,7 @@ class Deletemodel {
     if (json['data'] != null) {
       data = <Null>[];
       json['data'].forEach((v) {
-        data!.add(new Null.fromJson(v));
+        // data!.add(new Null.fromJson(v));
       });
     }
     statusCode = json['statusCode'];
@@ -22,7 +22,7 @@ class Deletemodel {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['message'] = this.message;
     if (this.data != null) {
-      data['data'] = this.data!.map((v) => v.toJson()).toList();
+      // data['data'] = this.data!.map((v) => v.toJson()).toList();
     }
     data['statusCode'] = this.statusCode;
     data['success'] = this.success;

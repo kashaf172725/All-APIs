@@ -23,7 +23,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
   }
    getplaylistfunc() {
 
-    updatecontroller.text = widget.data["name"];
+    updatecontroller.text = widget.data!.name;
   }
 
   @override
@@ -40,7 +40,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                   children: [
                   CustomText( text:"Update Playlist",
                  fontSize: 15,fontWeight: FontWeight.bold),
-                   CustomText(text: widget.data["name"]),
+                   CustomText(text: widget.data.name),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal:12.0),
                     child: TextField(
@@ -57,7 +57,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
                   
                         onTap: ()async{
                     var provider = context.read<PlaylistProvider>();
-                   await provider.updatePlaylistprovider(context, updatecontroller.text,widget.data["id"]);
+                   await provider.updatePlaylistprovider(context, updatecontroller.text,widget.data.id);
                         },
                         child: Container(
                                       decoration: BoxDecoration(
