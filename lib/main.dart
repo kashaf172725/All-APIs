@@ -3,7 +3,9 @@ import 'package:flutter_application_1/API_screens/controller/provider/PlaylistPr
 import 'package:flutter_application_1/API_screens/controller/provider/Signup_provider.dart';
 import 'package:provider/provider.dart';
 import 'API_screens/controller/provider/Login_provider.dart';
+import 'API_screens/view/homeScreen.dart';
 import 'API_screens/view/splash.dart';
+import 'API_screens/view/test.dart';
 
 void main() {
   runApp(MyApp());
@@ -28,9 +30,10 @@ class _MyAppState extends State<MyApp> {
       ],
       child: MaterialApp(
        
-        // theme: ThemeData(primarySwatch: MyColors.yellow,),
-         home: SplashPage(),
-     
+         theme: ThemeData(primarySwatch: Colors.grey,),
+      //  home:HomeScreen()
+        // home: SplashPage(),
+           home:Test(),
       
       ),
     );
