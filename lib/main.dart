@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
       child: MaterialApp(
        
          theme: ThemeData(primarySwatch: Colors.grey,),
-      //  home:HomeScreen()
+      
         // home: SplashPage(),
            home:Test(),
       
